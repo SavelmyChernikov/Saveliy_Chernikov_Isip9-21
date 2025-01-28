@@ -14,7 +14,7 @@
     <!-- LIB -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- STYLES FOR SITE -->
     <link rel="stylesheet" href="css/styles.css" />
 
@@ -57,37 +57,77 @@
                         <div class="swiper-slide hero-section" style="background-image: url('image/image.png');">
                             <div class="container-xl">
                                 <h1 class="display-4 fw-medium d-flex flex-column">
-                                    <span class="text-accent">Если хочется чего-то,</span> но не понятно чего
+                                    <span class="text-accent">Доставляем не просто грузы,</span>а уверенность
                                 </h1>
-                                <p class="lead mt-3">Знайте - морепродуктов!</p>
+                                <p class="lead mt-3">ТК Капитан — надёжный партнёр</p>
                                 <div class="d-flex align-items-center mt-5 catalog-btn">
-                                    <a href="#catalog" class="btn btn-secondary btn-lg px-5 py-3">Перейти в каталог</a>
+                                    <a href="#catalog" class="btn btn-secondary btn-lg px-5 py-3">Связаться</a>
                                     <div class="d-flex swiper-buttons">
+                                        
+                                        
                                         <div class="swiper-button-prev"></div>
                                         <div class="swiper-button-next"></div>
+                                        
+                                      
                                     </div>
+                                    
+                                </div>
+                                
+                                <div class="swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal">
+                                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active" aria-current="true"></span>
+                                    <span class="swiper-pagination-bullet"></span>
                                 </div>
                             </div>
+                            
                         </div>
-                        <div class="swiper-slide hero-section" style="background-image: url('https://images.hdqwalls.com/download/mountain-reflections-3840x2400.jpg');">
+                        
+                        <div class="swiper-slide hero-section" style="background-image: url('image/image\ 3.png');">
                             <div class="container-xl">
                                 <h1 class="display-4 fw-medium d-flex flex-column">
-                                    <span class="text-accent">Если хочется чего-то,</span> но не понятно чего
+                                    <span class="text-accent">Мы предлагаем больше,</span>чем просто логистику
                                 </h1>
-                                <p class="lead mt-3">Знайте - морепродуктов!</p>
+                                <p class="lead mt-3">ТК Капитан — надёжный партнёр</p>
                                 <div class="d-flex align-items-center mt-5 catalog-btn">
-                                    <a href="#catalog" class="btn btn-secondary btn-lg px-5 py-3">Перейти в каталог</a>
+                                    <a href="#catalog" class="btn btn-secondary btn-lg px-5 py-3">Связаться</a>
+                                    
                                     <div class="d-flex swiper-buttons">
                                         <div class="swiper-button-prev"></div>
                                         <div class="swiper-button-next"></div>
                                     </div>
+            
+                                </div>
+                                <div class="swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal">
+                                    <span class="swiper-pagination-bullet swiper-pagination-bullet"aria-current="true"></span>
+                                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
                                 </div>
                             </div>
+                            
                         </div>
+                        
+                    </div>
+                    
                     </div>
                 </div>
+                
             </section>
-
+            
+        </main>
+<div class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-md-3 feature-card">
+                    <h3 class="feature-title text-center">Надежность</h3>
+                    <p class="feature-description text-center">Достигайте новых высот в логистике с нашими профессиональными услугами и опытными специалистами.</p>
+                </div>
+                <div class="col-md-3 feature-card bg-middle">
+                    <h3 class="feature-title text-center">Индивидуальный подход</h3>
+                    <p class="feature-description text-center">Мы учитываем ваши потребности и помогаем достигать целей в комфортной и поддерживающей атмосфере.</p>
+                </div>
+                <div class="col-md-3 feature-card">
+                    <h3 class="feature-title text-center">Опыт</h3>
+                    <p class="feature-description text-center">Погружайтесь в комплексный опыт, ориентированный как на физические, так и на организационные аспекты.</p>
+                </div>
+            </div>
+</div>
 
     <!-- LIB -->
     <script src="js/bootstrap.bundle.min.js"></script>
@@ -95,6 +135,9 @@
 
     <!-- SCRIPT FOR SITE -->
     <script src="js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
 
@@ -102,12 +145,15 @@
     const swiper = new Swiper('.swiper-container', {
         slidesPerView: 1,
         effect: 'fade',
-        allowTouchMove: false,
+        allowTouchMove: true,
         slideToClickedSlide: false,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        pagination: {
+        el: '.swiper-pagination',
+        }
     });
 
     function toggleDropdown(event) {

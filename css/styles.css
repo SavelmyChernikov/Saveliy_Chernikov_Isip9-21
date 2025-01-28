@@ -24,15 +24,20 @@ font-family: "Champagne & Limousines", sans-serif;
     left: 0;
     width: 100%;
     z-index: 100;
-    margin-top: 1.1rem;
+    
+}
+.display-4 {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.2;
 }
   
   .header__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 20.83%;
-    padding-right: 20.83%;
+    padding-left: 16.5%;
+    padding-right: 16.5%;
   }
   
   .header__logo {
@@ -152,7 +157,7 @@ font-family: "Champagne & Limousines", sans-serif;
 
 @media (max-width: 1280px) {
     :root{
-        font-size: 20px;
+        
     }
     .header__container {
         padding-left: 12%;
@@ -174,6 +179,12 @@ font-family: "Champagne & Limousines", sans-serif;
             font-size: 16px;
     }
     }
+@media (max-width: 990px) {
+        .display-4{
+            text-align: center;
+            font-size: 3rem;
+        }
+}
 
  
   
@@ -195,9 +206,54 @@ font-family: "Champagne & Limousines", sans-serif;
     }
   }
   
-  @media (max-width: 480px) {
+  
+  /* Стили для планшетов (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .header {
+        padding: 15px 0; /* Уменьшаем отступы для компактности */
+    }
+
+    .header__container {
+        padding-left: 8%;
+        padding-right: 8%; /* Уменьшаем отступы контейнера */
+        gap: 20px; /* Пространство между элементами */
+    }
+
+    .header__logo {
+        width: 70px; /* Уменьшаем размер логотипа */
+    }
+
+    .header__button {
+        padding: 8px 16px; /* Компактная кнопка */
+        font-size: 0.9rem; /* Уменьшаем шрифт кнопки */
+    }
+
+    .header__nav-list {
+        gap: 30px; /* Уменьшаем расстояние между пунктами меню */
+    }
+
+    .header__nav-item {
+        font-size: 1.2rem;
+    }
+}
+.display-4 {
+    text-align: left;
+}
+@media (max-width: 990px) {
+    .display-4{
+        text-align: center;
+    }
+}
+@media (max-width: 480px) {
     :root{
         font-size: 14px;
+    }
+    .display-4{
+        text-align: left;
+        font-size: 2.3rem;
+    }
+    .lead{
+        text-align: left;
     }
     .header__logo {
       width: 60px;
@@ -207,6 +263,28 @@ font-family: "Champagne & Limousines", sans-serif;
       padding: 8px 15px;
     }
   }
+/* Дополнительные стили для небольших планшетов (например, iPad Mini) */
+@media (max-width: 873px) {
+    :root{
+        font-size: 24px;
+    }
+    .header__container {
+        padding-left: 6%;
+        padding-right: 6%; /* Еще меньше отступов */
+    }
+
+    .header__button {
+        margin-left: 0; /* Убираем левый отступ у кнопки */
+    }
+
+    .header__nav-list {
+        gap: 20px; /* Ближе друг к другу */
+    }
+
+    .header__nav-item {
+        font-size: 1.2rem;
+    }
+}
 .header__burger-btn.active .header__burger-line:nth-child(1) {
     transform: translateY(11px) rotate(45deg);
 }
@@ -228,6 +306,8 @@ font-family: "Champagne & Limousines", sans-serif;
     background-color: #EDE8E1;
     margin-top: 4rem;
     border-radius: 1rem;
+    width: 60%;
+    height: 300px;
 }
 .header__burger-btn{
     transition: all 0.5s ease;
@@ -950,4 +1030,135 @@ div.news-list img.preview_picture
 	color:#486DAA;
 }
 
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* Расстояние между элементами */
+    bottom: 20px; /* Расположение по вертикали */
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
 
+.swiper-pagination-bullet {
+    width: 40px; /* Ширина полоски */
+    height: 6px; /* Высота полоски */
+    background-color: rgba(255, 255, 255, 0.5); /* Полупрозрачный цвет */
+    border-radius: 3px; /* Закругленные края */
+    transition: background-color 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #fff; /* Полностью белый цвет для активного элемента */
+}
+@media (max-width: 350px) {
+    :root{
+        font-size: 22px;
+    }
+
+   
+}
+
+.features-row {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 0;
+}
+
+.feature-card {
+    background-color: #f0efe9;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 0 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.feature-card.bg-middle {
+  background-color: #c2b8a3;
+}
+
+.feature-title {
+    color: #676662;
+    font-weight: bold;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+    max-width: 100%;
+    font-size: 24px; /* Размер шрифта по умолчанию для feature-title */
+}
+
+.feature-description {
+    color: #676662;
+    font-size: 16px; /* Размер шрифта по умолчанию для feature-description */
+    font-weight: normal;
+    word-wrap: break-word;
+    max-width: 100%;
+}
+
+/* Стили для компьютеров */
+@media (min-width: 992px) {
+    .features-row {
+         margin-left: 200px;
+    }
+    .feature-card:first-child {
+      margin-left: 0;
+    }
+     .feature-card:last-child {
+      margin-right: 0;
+    }
+     .feature-title {
+        font-size: 24px; /* Размер шрифта для компьютеров */
+    }
+    .feature-description {
+        font-size: 16px;
+    }
+
+}
+
+/* Стили для средних экранов (планшеты) */
+@media (max-width: 991px) and (min-width: 768px) {
+    .feature-card {
+       margin: 0 30px;
+    }
+     .feature-card:first-child {
+      margin-left: 0;
+    }
+    .feature-card:last-child {
+      margin-right: 0;
+    }
+    
+}
+
+
+/* Стили для меньших экранов (телефоны) */
+@media (max-width: 767px) {
+    .feature-card {
+        width: 100%;
+        margin: 0 0 20px;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .display-4{
+        font-size: 2.1rem;
+    }
+    
+}
+
+@media (min-width: 768px) {
+    .col-md-3 {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 28%;
+    }
+}
+@media (min-width: 992px) {
+    .container, .container-lg, .container-md, .container-sm {
+        max-width: 984px;
+    }
+}
