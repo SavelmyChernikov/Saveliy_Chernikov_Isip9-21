@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <title>Гурман Маркет</title>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/fonts/ChampagneLimousines/style.css" />
+
+    <!-- LIB -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+
+    <!-- STYLES FOR SITE -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <link rel="stylesheet" href="css/marquee.css" />
+</head>
+<body>
+    
+
+        <!-- header -->
+        <header class="header">
+            <div class="header__container">
+                 <div class="header__logo header__logo--desktop">
+                     <!-- Logo Image here -->
+                    <img src="" alt="" class="logo-img">
+                </div>
+                <button class="header__burger-btn" aria-label="Открыть меню">
+                    <span class="header__burger-line"></span>
+                    <span class="header__burger-line"></span>
+                    <span class="header__burger-line"></span>
+                </button>
+                <nav class="header__nav">
+                      <div class="header__logo header__logo--mobile">
+                           <!-- Logo Image here -->
+                            <img src="" alt="" class="logo-img">
+                        </div>
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item">О нас</li>
+                        <li class="header__nav-item">Услуги</li>
+                        <li class="header__nav-item">Контакты</li>
+                    </ul>
+                </nav>
+                <button class="header__button">ЗАКАЗАТЬ ЗВОНОК</button>
+            </div>
+        </header>
+        <!-- main -->
+        <main class="main">
+            <section>
+                <div class="swiper-container my-4">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide hero-section" style="background-image: url('/image/image.png');">
+                            <div class="container-xl">
+                                <h1 class="display-4 fw-medium d-flex flex-column">
+                                    <span class="text-accent">Если хочется чего-то,</span> но не понятно чего
+                                </h1>
+                                <p class="lead mt-3">Знайте - морепродуктов!</p>
+                                <div class="d-flex align-items-center mt-5 catalog-btn">
+                                    <a href="#catalog" class="btn btn-secondary btn-lg px-5 py-3">Перейти в каталог</a>
+                                    <div class="d-flex swiper-buttons">
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-button-next"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide hero-section" style="background-image: url('../assets/images/main-page-1.jpg');">
+                            <div class="container-xl">
+                                <h1 class="display-4 fw-medium d-flex flex-column">
+                                    <span class="text-accent">Если хочется чего-то,</span> но не понятно чего
+                                </h1>
+                                <p class="lead mt-3">Знайте - морепродуктов!</p>
+                                <div class="d-flex align-items-center mt-5 catalog-btn">
+                                    <a href="#catalog" class="btn btn-secondary btn-lg px-5 py-3">Перейти в каталог</a>
+                                    <div class="d-flex swiper-buttons">
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-button-next"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+    <!-- LIB -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- SCRIPT FOR SITE -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+
+<script>
+    const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        effect: 'fade',
+        allowTouchMove: false,
+        slideToClickedSlide: false,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    function toggleDropdown(event) {
+        event.preventDefault();
+        const dropdownMenu = event.target.nextElementSibling;
+
+        if (dropdownMenu) {
+            dropdownMenu.classList.toggle('show');
+        } else {
+            console.error('Dropdown menu not found');
+        }
+    }
+</script>
