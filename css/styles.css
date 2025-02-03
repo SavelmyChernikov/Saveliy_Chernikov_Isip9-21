@@ -612,6 +612,10 @@ footer {
     grid-template-columns: repeat(5, 1fr);
     gap: 17px;
 }
+.story-img{
+    margin-right: 10px;
+    margin-left: -18px;
+}
 
 .recepies-card {
     position: relative;
@@ -781,7 +785,6 @@ section.home__popular__categories {
 
 .bg-ripple {
     background-color: #f8f5f0       ;
-    background-image: url(https://gurmanmarket.ru/include/patterns/ripple.png);
     background-repeat: repeat;
     background-size: cover;
     transition: background-color linear .2s;
@@ -1134,8 +1137,12 @@ div.news-list img.preview_picture
 /* Стили для меньших экранов (телефоны) */
 @media (max-width: 767px) {
     .feature-card {
-        width: 90%;
+        width: 91.5%;
         margin: 0 0 20px;
+    }
+    .story{
+        width: 91.5%;
+        margin: 0 auto;
     }
     
 }
@@ -1306,7 +1313,7 @@ div.news-list img.preview_picture
     text-align: left; /* Текст по левому краю */
 }
 .story{
-    background-image: url('/image/Group\ 180\ \(1\).png');
+    background-image: url('image/p.png');
 }
 .service-card p {
      color: #4a4a4a;
@@ -1350,6 +1357,7 @@ div.news-list img.preview_picture
     }
     .service-icon{
         max-width: 40px;
+        margin-left: -0.05rem;
     }
     .service-card::before {
     
