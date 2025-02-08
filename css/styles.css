@@ -1430,3 +1430,215 @@ div.news-list img.preview_picture
     }
     
 }
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #d2b48c; /* Фон */
+}
+
+.marquee {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%; /*  Начинаем за пределами экрана */
+    animation: marquee 20s linear infinite; /* Увеличиваем время анимации */
+    background-color: #d2b48c;
+}
+
+.marquee span {
+    font-size: 24px;
+    color: #4a4258; /* Цвет текста как на изображении */
+    padding: 0 50px; /*  Добавляем отступы между повторами */
+    font-weight: bold;
+}
+.marquee i {
+    color: #4a4258;
+    margin-right: 10px;
+    font-size: 20px;
+    padding-left: 3rem;
+}
+
+
+@keyframes marquee {
+    0%   { transform: translate(0%); }
+    100% { transform: translate(-100%); }
+}
+
+.feedback-container-oc {
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    min-height: 80vh; /* Занимает всю высоту экрана */
+    margin: 0 auto;
+    
+}
+
+.container-oc {
+    display: flex;
+    
+    max-width: 1200px; /* Максимальная ширина контейнера */
+    border-radius: 15px;
+    overflow: hidden; /* Скрывает контент, выходящий за границы */
+}
+
+.image-container-oc {
+    
+}
+
+.image-container-oc img {
+    width: 100%; /* Занимает всю ширину контейнера */
+    height: auto; /* Автоматическое определение высоты */
+    display: block; /* Убирает отступы под изображением */
+}
+
+.form-container-oc {
+    
+    
+    padding: 0 0 0 20px; /* Отступы внутри формы */
+}
+
+.form-container-oc h2 {
+    color: #777572;
+    font-size: 2rem;
+    text-align: left;
+    font-weight: 400;
+   
+}
+
+.form-group-oc {
+    margin-bottom: 31px; /* Отступ между элементами формы */
+}
+
+.form-container-oc label {
+    display: block;
+    color: #BDAA8A;
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+.form-container-oc input[type="text"],
+.form-container-oc input[type="email"],
+.form-container-oc textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #EDE8E1;
+    font-size: 16px;
+    box-sizing: border-box; /* Для корректной работы width: 100% с padding */
+}
+
+.form-container-oc textarea {
+    height: 120px;
+    resize: vertical; /* Разрешает изменение размера по вертикали */
+}
+
+.form-container-oc button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background-color: #a39073;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container-oc button:hover {
+    background-color: #6b5d47;
+}
+
+
+/* Адаптивность */
+@media (max-width: 940px) {
+    .container-oc {
+        flex-direction: column; /* Вертикальное расположение на маленьких экранах */
+    }
+
+    .image-container-oc {
+        display: none;
+    }
+
+    .form-container-oc {
+        order: 2; /* Форма ниже изображения */
+        background-image: url('image/p.p');
+        padding: 20px;
+        
+        background: linear-gradient(rgba(255,255,255,0.5), rgba(255, 255, 255, 0.014)),url('image/oc.png');
+        background-size: 100% 100%;
+    }
+    .form-container-oc label{
+        color:#58554E;
+    }
+    .form-container-oc{
+        margin: 15px;
+    }
+    .form-container-oc h2{
+        text-align: center;
+    }
+}
+.footer {
+    background-color: white;
+    color: #808080; /* Серый текст */
+    padding: 20px; /* Отступы сверху и снизу */
+    text-align: center; /* Центрирование текста */
+}
+
+/* Контейнер для содержимого футера */
+.footer-container {
+    display: flex; /* Используем flexbox для выравнивания элементов */
+    justify-content: space-between; /* Размещаем элементы по краям */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    max-width: 950px; /* Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрируем контейнер по горизонтали */
+}
+
+/* Секция с копирайтом */
+.copyright {
+    font-size: 14px;
+}
+
+/* Секция с социальными иконками */
+.social-icons {
+    display: flex; /* Используем flexbox для размещения иконок в ряд */
+    gap: 10px; /* Расстояние между иконками */
+}
+
+/* Стили для отдельных иконок (вам нужно добавить свои иконки и стили) */
+.social-icons a {
+    display: inline-block;
+    width: 40px; /* Ширина иконки */
+    height: 40px; /* Высота иконки */
+    background-color: #808080; /* Серый фон для иконки */
+    border-radius: 50%; /* Круглая форма */
+    text-align: center; /* Центрируем иконку */
+    line-height: 40px; /* Выравниваем иконку по вертикали */
+    color: #fff; /* Белый цвет иконки */
+    font-size: 20px; /* Размер иконки */
+    text-decoration: none; /* Убираем подчеркивание ссылок */
+}
+
+@media (max-width: 940px) {
+    .footer-container{
+        flex-direction: column;
+    }
+    .social-icons{
+        margin-top: 1rem;
+    }
+}
+
+/* Адаптивность для маленьких экранов */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Располагаем элементы вертикально */
+        align-items: center; /* Выравниваем элементы по центру */
+    }
+
+    .copyright {
+        margin-bottom: 10px; /* Добавляем отступ между секциями */
+    }
+    
+}
