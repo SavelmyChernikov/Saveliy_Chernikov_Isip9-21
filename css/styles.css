@@ -11,7 +11,21 @@
 }
 body{
     font-family: "Roboto Slab", serif;
+    margin: 0;
+    padding: 0;
 }
+
+.hidden {
+    opacity: 0;
+    transform: translateY(50px); /* Сдвигаем вниз для эффекта появления */
+    transition: all 0.8s ease; /* Добавляем плавный переход */
+  }
+
+  /* Класс для показа элементов */
+  .show {
+    opacity: 1;
+    transform: translateY(0); /* Возвращаем на исходную позицию */
+  }
 .header {
     font-family: "Roboto Slab", serif;
     background-color: #fff;
@@ -817,10 +831,7 @@ section.home__popular__categories {
     }
 }
 
-body {
-    padding: 0;
-    margin: 0;
-}
+
 
 .headline {
     display: block;
@@ -1641,4 +1652,42 @@ div.news-list img.preview_picture
         margin-bottom: 10px; /* Добавляем отступ между секциями */
     }
     
+}
+.feature-card {
+    opacity: 0; /* Изначально скрываем */
+    transform: translateY(50px); /* Сдвигаем вниз */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Добавляем плавный переход */
+  }
+
+  .feature-card.show {
+    opacity: 1; /* Показываем элемент */
+    transform: translateY(0); /* Возвращаем на место */
+  }
+  .story {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.story.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.services-block{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.services-block.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.feedback-container-oc{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.feedback-container-oc.show{
+    opacity: 1;
+    transform: translateY(0);
 }
