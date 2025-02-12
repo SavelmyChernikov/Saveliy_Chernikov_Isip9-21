@@ -35,12 +35,12 @@
                             <img src="" alt="" class="logo-img">
                         </div>
                     <ul class="header__nav-list">
-                        <li class="header__nav-item">О нас</li>
-                        <li class="header__nav-item">Услуги</li>
-                        <li class="header__nav-item">Контакты</li>
+                        <li class="header__nav-item"><a href="#onys">О нас</a></li>
+                        <li class="header__nav-item"><a href="#yslugi">Услуги</a></li>
+                        <li class="header__nav-item"><a href="cont.html">Контакты</a></li>
                     </ul>
                 </nav>
-                <button class="header__button">ЗАКАЗАТЬ ЗВОНОК</button>
+                <button class="header__button"><a href="#zvonok" class="head">ЗАКАЗАТЬ ЗВОНОК</a></button>
             </div>
         </header>
         <!-- main -->
@@ -55,7 +55,7 @@
                                 </h1>
                                 <p class="lead mt-3">ТК Капитан — надёжный партнёр</p>
                                 <div class="d-flex align-items-center mt-5 catalog-btn">
-                                    <a href="#catalog" class="btn btn-secondary btn-lg px-5 py-3">Связаться</a>
+                                    <a href="#zvonok" class="btn btn-secondary btn-lg px-5 py-3">Связаться</a>
                                     <div class="d-flex swiper-buttons">
                                         
                                         
@@ -99,13 +99,14 @@
                         </div>
                         
                     </div>
-                    
+                    <a name="onys"></a>
                     </div>
                 </div>
                 
             </section>
             
         </main>
+        
 <div class="container my-5">
   <div class="row justify-content-center">
     <div class="col-md-3 feature-card">
@@ -136,6 +137,7 @@
             </div>
         </div>
     </div>
+    <a name="yslugi"></a>
 </div>
 
 <div class="container services-block">
@@ -176,7 +178,7 @@
              <div class="service-card">
                   <img src="image/image (1).png" alt="" class="service-icon">
                   <div class="service-div">
-                    <h3 class="service-h">Копка <br>котлованов</h3>
+                    <h3 class="service-h">Разработка <br>котлованов</h3>
                     <p class="service-p">Профессиональные услуги по копке с учетом всех нюансов.</p>
                   </div>
                 
@@ -222,19 +224,19 @@
         <div class="image-container-oc">
             <img src="image/oc.png" alt="Рукопожатие">
         </div>
-
+        <a name="zvonok"></a>
         <div class="form-container-oc">
             <h2>Свяжитесь с нами</h2>
 
-            <form action="#" method="post">
+            <form action="submit_form.php" method="post">
                 <div class="form-group-oc">
                     <label for="name">Ваше имя:</label>
                     <input type="text" id="name" name="name" placeholder="Имя" required>
                 </div>
 
                 <div class="form-group-oc">
-                    <label for="email">Ваш email:</label>
-                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <label for="phone">Ваш телефон:</label>
+                    <input type="tel" class="phonne" id="phone" name="phone" placeholder="Телефон" required>
                 </div>
 
                 <div class="form-group-oc">
